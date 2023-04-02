@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Posts from './components/Posts';
 import NewPost from './components/NewPost';
-import './App.css';
+import Post from './components/Post';
+import './css/App.css';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Posts />} />
           <Route path="/new-post" element={<NewPost />} />
+          <Route path="/posts/:id" element={<Post />} />
         </Routes>
       </div>
     </Router>
