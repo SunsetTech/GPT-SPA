@@ -1,24 +1,24 @@
 
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Posts from './components/Posts';
 import NewPost from './components/NewPost';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/new-post">New Post</Link>
-            </li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/new-post">New Post</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="main-content">
         <Routes>
           <Route path="/" element={<Posts />} />
           <Route path="/new-post" element={<NewPost />} />
